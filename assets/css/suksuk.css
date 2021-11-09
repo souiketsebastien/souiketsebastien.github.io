@@ -1,0 +1,44 @@
+.firstNameAnim,
+.lastNameAnim {
+  position: relative;
+  opacity: 0;
+}
+
+.firstNameAnim {
+  animation: firstNameAnim 2s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.lastNameAnim {
+  animation: lastNameAnim 2s ease-in-out forwards,
+    lastNameColorAnim 1s ease-in-out forwards;
+  animation-delay: 0.5s, 2.5s;
+}
+
+@keyframes firstNameAnim {
+  0% {
+    top: -1000px;
+    opacity: 0;
+  }
+  100% {
+    top: 0;
+    opacity: 100;
+  }
+}
+
+@keyframes lastNameAnim {
+  0% {
+    bottom: -1000px;
+    opacity: 0;
+  }
+  100% {
+    bottom: 0;
+    opacity: 100;
+  }
+}
+
+@keyframes lastNameColorAnim {
+  100% {
+    background-color: white;
+  }
+}
